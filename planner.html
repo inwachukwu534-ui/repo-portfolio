@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan coursework and deadlines with Divine Nwachukwu's local, interactive academic planner.">
+  <title>Academic Planner | Divine Nwachukwu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>Divine<span class="brand-dot">.</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button><nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="planner.html">Planner</a><a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">↗</span></a></nav></div></header>
+  <main id="main">
+    <section class="page-hero container planner-hero"><p class="eyebrow"><span class="status-dot"></span> YOUR STUDY SPACE</p><h1>Plan with <span class="text-gradient">purpose.</span></h1><p>Add coursework and deadlines, then tick off each task as you go. Your tasks stay in this browser.</p></section>
+    <section class="container planner-layout section-top">
+      <aside class="planner-sidebar"><div class="today-card"><p class="card-kicker">TODAY IS</p><p class="today-date" data-today></p><p class="muted-copy">Make room for steady progress, one task at a time.</p><div class="progress-label"><span>Tasks completed</span><strong data-progress-count>0 / 0</strong></div><div class="progress-track"><span data-progress-bar></span></div></div><div class="privacy-note"><span>▣</span><p>Your planner is saved locally in this browser using localStorage.</p></div></aside>
+      <div class="planner-main"><div class="planner-panel"><div class="panel-heading"><div><p class="eyebrow">ADD A TASK</p><h2>What needs your attention?</h2></div><span class="panel-spark">✳</span></div><form id="task-form" class="task-form" novalidate><div class="form-field task-title-field"><label for="task-title">Task</label><input id="task-title" name="title" type="text" maxlength="120" placeholder="e.g. Review statistics lecture notes" required><span class="field-error" id="task-title-error"></span></div><div class="form-row"><div class="form-field"><label for="task-deadline">Deadline</label><input id="task-deadline" name="deadline" type="date"></div><div class="form-field"><label for="task-priority">Priority</label><select id="task-priority" name="priority"><option value="normal">Normal</option><option value="high">High</option><option value="low">Low</option></select></div></div><button class="button button-primary add-task-button" type="submit"><span aria-hidden="true">＋</span> Add to planner</button></form></div>
+        <div class="task-list-heading"><div><p class="eyebrow">YOUR TASKS</p><h2>Academic checklist</h2></div><label class="filter-label" for="task-filter">Show <select id="task-filter"><option value="all">All tasks</option><option value="active">To do</option><option value="completed">Completed</option></select></label></div>
+        <div id="task-list" class="task-list" aria-live="polite"></div><div id="empty-tasks" class="empty-state"><span class="empty-icon">✳</span><h3>Your next win starts here.</h3><p>Add a task above to start building your study plan.</p></div><p id="planner-status" class="sr-only" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>Divine<span class="brand-dot">.</span></span></a><p>Made with curiosity in Nigeria.</p><p>© <span data-year></span> Divine Nwachukwu</p></div></footer>
+</body></html>
